@@ -6,7 +6,7 @@ Decidim.configure do |config|
   config.application_name = "Decidim ForumAndorra"
 
   # The email that will be used as sender in all emails from Decidim
-  config.mailer_sender = "prova.sinzerad@gmail.com"
+  config.mailer_sender = Decidim.application.secrets.email_from
 
   # Sets the list of available locales for the whole application.
   #
