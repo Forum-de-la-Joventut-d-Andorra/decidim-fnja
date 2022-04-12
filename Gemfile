@@ -17,6 +17,8 @@ gem "faker", "~> 2.14"
 gem "puma", ">= 5.0.0"
 gem "uglifier", "~> 4.1"
 
+gem "decidim-decidim_awesome"
+
 # gem 'decidim-verifications-custom_csv_census', git: 'https://github.com/CodiTramuntana/decidim-verifications-custom_csv_census.git'
 
 group :development, :test do
