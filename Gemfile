@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 source "https://rubygems.org"
-	
+
 ruby RUBY_VERSION
-DECIDIM_VERSION="0.26.1"
+DECIDIM_VERSION = "0.26.1"
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
@@ -13,9 +13,9 @@ gem "decidim-consultations", DECIDIM_VERSION
 # gem "decidim-templates", DECIDIM_VERSION
 gem "bootsnap", "~> 1.3"
 
+gem "faker", "~> 2.14"
 gem "puma", ">= 5.0.0"
 gem "uglifier", "~> 4.1"
-gem "faker", "~> 2.14"
 
 # gem 'decidim-verifications-custom_csv_census', git: 'https://github.com/CodiTramuntana/decidim-verifications-custom_csv_census.git'
 
@@ -45,8 +45,8 @@ group :development do
 end
 
 group :production do
-  gem "passenger"
   gem "figaro"
+  gem "passenger"
   gem "sidekiq"
   gem "sidekiq-cron"
 end
