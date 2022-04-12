@@ -6,7 +6,7 @@ Decidim.configure do |config|
   config.application_name = "Decidim ForumAndorra"
 
   # The email that will be used as sender in all emails from Decidim
-  config.mailer_sender = Decidim.application.secrets.email_from
+  config.mailer_sender = Rails.application.secrets.email_from
 
   # Sets the list of available locales for the whole application.
   #
@@ -282,3 +282,6 @@ end
 
 Rails.application.config.i18n.available_locales = Decidim.available_locales
 Rails.application.config.i18n.default_locale = Decidim.default_locale
+
+# Inform Decidim about the assets folder
+Decidim.register_assets_path File.expand_path("app/packs", Rails.application.root)
