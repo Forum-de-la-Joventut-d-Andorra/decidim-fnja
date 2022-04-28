@@ -1,10 +1,3 @@
-PATH
-  remote: ../../decidim-verifications-direct_verifications
-  specs:
-    decidim-direct_verifications (1.1)
-      decidim-admin (>= 0.25.0)
-      decidim-core (>= 0.25.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -314,6 +307,9 @@ GEM
       w3c_rspec_validators (~> 0.3.0)
       webmock (~> 3.6)
       wisper-rspec (~> 1.0)
+    decidim-direct_verifications (1.2)
+      decidim-admin (>= 0.25.0)
+      decidim-core (>= 0.25.0)
     decidim-forms (0.26.1)
       decidim-core (= 0.26.1)
       wicked_pdf (~> 2.1)
@@ -825,7 +821,7 @@ DEPENDENCIES
   decidim-consultations (= 0.26.1)
   decidim-decidim_awesome
   decidim-dev (= 0.26.1)
-  decidim-direct_verifications!
+  decidim-direct_verifications (~> 1.2)
   faker (~> 2.14)
   figaro
   letter_opener_web (~> 1.4)
