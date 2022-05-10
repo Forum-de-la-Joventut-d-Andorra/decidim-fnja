@@ -2,7 +2,7 @@
 
 Decidim.configure do |config|
   # The name of the application
-  config.application_name = "Decidim ForumAndorra"
+  config.application_name = "Fòrum de la Joventut d'Andorra"
 
   # The email that will be used as sender in all emails from Decidim
   config.mailer_sender = Rails.application.secrets.email_from
