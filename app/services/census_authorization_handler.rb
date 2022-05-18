@@ -62,7 +62,7 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
     case @message
     when /data de naixement/
       errors.add(:date_of_birth, I18n.t("census_authorization_handler.invalid_date_of_birth", scope: "decidim.authorization_handlers"))
-    when /document/
+    else
       errors.add(:document_number, I18n.t("census_authorization_handler.invalid_document", scope: "decidim.authorization_handlers"))
     end
   end
