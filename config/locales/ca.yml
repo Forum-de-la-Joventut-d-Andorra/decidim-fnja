@@ -7,4 +7,6 @@ ca:
         explanation: Verificat el teu compte si ets resident
         invalid_document: Document invàlid
         invalid_date_of_birth: Data de naixement invàlida
-        name: Resident a Andorra
+        fields:
+          date_of_birth: Data de naixement
+        name: Resident a Andorra (de 16 a 29 anys)
