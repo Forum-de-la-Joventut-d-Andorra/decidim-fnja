@@ -1,0 +1,10 @@
+---
+ca:
+  decidim:
+    authorization_handlers:
+      census_authorization_handler:
+        connection_error: No ha sigut possible realitzar la verificació
+        explanation: Verificat el teu compte si ets resident
+        invalid_document: Document invàlid
+        invalid_date_of_birth: Data de naixement invàlida
+        name: Resident a Andorra
