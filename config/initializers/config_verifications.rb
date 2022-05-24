@@ -13,3 +13,11 @@ Decidim::DirectVerifications.configure do |config|
   # change the to the metadata_parser if you want it
   # config.input_parser = :metadata_parser
 end
+
+# Remove NIE from id_documents form
+Rails.application.config.to_prepare do
+  Decidim::Verifications::IdDocuments::InformationForm.class_eval do
+    Decidim::Verifications::IdDocuments::InformationForm.send(:remove_const, :DOCUMENT_TYPES)
+    Decidim::Verifications::IdDocuments::InformationForm.const_set(:DOCUMENT_TYPES, %w(DNI passport))
+  end
+end
