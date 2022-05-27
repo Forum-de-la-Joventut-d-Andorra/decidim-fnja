@@ -1,12 +1,18 @@
 ---
 ca:
+  activemodel:
+    attributes:
+      census_authorization_handler:
+        date_of_birth: Data de naixement
+        document_number: Número de document (amb lletra)
   decidim:
     authorization_handlers:
       census_authorization_handler:
         connection_error: No ha sigut possible realitzar la verificació
-        explanation: Verificat el teu compte si ets resident
-        invalid_document: Document invàlid
-        invalid_date_of_birth: Data de naixement invàlida
+        explanation: Verifica el teu compte si ets resident
         fields:
           date_of_birth: Data de naixement
+          zone: Zona
+        invalid_date_of_birth: Data de naixement invàlida
+        invalid_document: Document invàlid
         name: Resident a Andorra (de 16 a 29 anys)
