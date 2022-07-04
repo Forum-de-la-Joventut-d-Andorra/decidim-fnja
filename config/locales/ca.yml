@@ -8,11 +8,11 @@ ca:
   decidim:
     authorization_handlers:
       census_authorization_handler:
-        connection_error: No ha sigut possible realitzar la verificació
+        connection_error: No ha estat possible realitzar la verificació
         explanation: Verifica el teu compte si ets resident
         fields:
           date_of_birth: Data de naixement
           zone: Zona
-        invalid_date_of_birth: Data de naixement invàlida
-        invalid_document: Document invàlid
-        name: Resident a Andorra (de 16 a 29 anys)
+        invalid_date_of_birth: La data de naixement no és vàlida
+        invalid_document: El número de document no és vàlid
+        name: Resident a Andorra (de 16 a 35 anys)

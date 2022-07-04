@@ -3,17 +3,16 @@ en:
   activemodel:
     attributes:
       census_authorization_handler:
-        date_of_birth: Birth date
+        date_of_birth: Date of birth
         document_number: Document number (with letter)
   decidim:
     authorization_handlers:
       census_authorization_handler:
-        connection_error: There's been an error while trying to connect with the census
-          service
-        explanation: Verificate your account if you are a resident
+        connection_error: Could not perform verification
+        explanation: Verify your account if you are a resident
         fields:
-          date_of_birth: Birth date
+          date_of_birth: Date of birth
           zone: Zone
-        invalid_date_of_birth: Invalid date of birth
-        invalid_document: Invalid document
-        name: Andorra resident (16 to 29 years old)
+        invalid_date_of_birth: The date of birth is not valid
+        invalid_document: The document number is not valid
+        name: Andorra resident (16 to 35 years old)
