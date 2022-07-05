@@ -18,7 +18,7 @@ class CensusActionAuthorizer < Decidim::Verifications::DefaultActionAuthorizer
     age = Time.zone.today.year - Date.parse(date_of_birth).year
     return if age < 16
 
-    age < 30
+    age < 36
   rescue StandardError => e
     Rails.logger.error "ACTION AUTHORIZER ERROR: #{e.message}"
   end

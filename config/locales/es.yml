@@ -4,7 +4,7 @@ es:
     attributes:
       census_authorization_handler:
         date_of_birth: Fecha de nacimiento
-        document_number: Número de documento (con lletra)
+        document_number: Número de documento (con letra)
   decidim:
     authorization_handlers:
       census_authorization_handler:
@@ -13,6 +13,6 @@ es:
         fields:
           date_of_birth: Fecha de nacimiento
           zona: Zona
-        invalid_date_of_birth: Fecha de nacimiento inválida
-        invalid_document: Documento no válido
-        name: Residente en Andorra (de 16 a 29 años)
+        invalid_date_of_birth: La fecha de nacimiento no es válida
+        invalid_document: El número de documento no es válido
+        name: Residente en Andorra (de 16 a 35 años)
