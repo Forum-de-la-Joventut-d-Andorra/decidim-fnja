@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = "0.26.1"
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.26-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
@@ -17,9 +17,9 @@ gem "faker", "~> 2.14"
 gem "puma", ">= 5.0.0"
 gem "uglifier", "~> 4.1"
 
-gem "decidim-decidim_awesome"
+gem "decidim-decidim_awesome", github: "openpoke/decidim-module-decidim_awesome"
 gem "decidim-direct_verifications", "~> 1.2"
-gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "develop"
+gem "decidim-term_customizer", git: "https://github.com/mainio/decidim-module-term_customizer", branch: "master"
 
 gem "virtus-multiparams"
 
@@ -33,11 +33,11 @@ group :development, :test do
 end
 
 group :development do
-  gem "letter_opener_web", "~> 1.4"
-  gem "listen", "~> 3.1"
-  gem "spring", "~> 2.0"
-  gem "spring-watcher-listen", "~> 2.0"
-  gem "web-console", "~> 4.0"
+  gem "letter_opener_web"
+  gem "listen"
+  gem "spring"
+  gem "spring-watcher-listen"
+  gem "web-console"
 
   gem "capistrano", "~> 3.15"
   gem "capistrano-bundler"
@@ -51,6 +51,6 @@ end
 group :production do
   gem "figaro"
   gem "passenger"
-  gem "sidekiq"
+  gem "sidekiq", "<7"
   gem "sidekiq-cron"
 end
