@@ -57,9 +57,9 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
   def valid_data
     errors.add(:base, I18n.t("census_authorization_handler.connection_error", scope: "decidim.authorization_handlers")) if response.nil?
 
-    return if @code == "OK"
+    return if code == "OK"
 
-    case @message
+    case message
     when /data de naixement/
       errors.add(:date_of_birth, I18n.t("census_authorization_handler.invalid_date_of_birth", scope: "decidim.authorization_handlers"))
     else
@@ -67,23 +67,28 @@ class CensusAuthorizationHandler < Decidim::AuthorizationHandler
     end
   end
 
+  attr_reader :code, :message
+
   def response
     return @response if @response
 
     return nil if document_number.blank? ||
                   date_of_birth.blank?
 
-    service = AndorraWebservice.new(
+    begin
+      @response = service.response.body
+      @code = @response && @response["codiRetorn"]
+      @message = @response && @response["missatgeRetorn"]
+    rescue StandardError
+      nil
+    end
+  end
+
+  def service
+    @service ||= AndorraWebservice.new(
       document_number: sanitized_document_number,
       document_letter: sanitized_document_letter,
       date_of_birth: sanitized_date_of_birth
     )
-    begin
-      @response = service.response.body
-      @code = @response["codiRetorn"]
-      @message = @response["missatgeRetorn"]
-    rescue StandardError
-      nil
-    end
   end
 end
