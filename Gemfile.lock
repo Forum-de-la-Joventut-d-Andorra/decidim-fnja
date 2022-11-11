@@ -177,15 +177,6 @@ GIT
       decidim-core (= 0.26.3)
 
 GIT
-  remote: https://github.com/mainio/decidim-module-term_customizer
-  revision: 9540a2ab20b872896e51ea5f97c5ebae3388ca60
-  branch: master
-  specs:
-    decidim-term_customizer (0.26.0)
-      decidim-admin (~> 0.26.0)
-      decidim-core (~> 0.26.0)
-
-GIT
   remote: https://github.com/openpoke/decidim-module-decidim_awesome.git
   revision: d7115a8c5deaa7516fd77115fcd4b66086769e3a
   specs:
@@ -193,6 +184,15 @@ GIT
       decidim-admin (>= 0.25.0, < 0.27)
       decidim-core (>= 0.25.0, < 0.27)
       sassc (~> 2.3)
+
+GIT
+  remote: https://github.com/openpoke/decidim-module-term_customizer
+  revision: bbbd9a116c6192d43f30e3ffd945da51ed24be0e
+  branch: master
+  specs:
+    decidim-term_customizer (0.26.0)
+      decidim-admin (~> 0.26.0)
+      decidim-core (~> 0.26.0)
 
 GEM
   remote: https://rubygems.org/
