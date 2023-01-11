@@ -12,7 +12,6 @@ end
 
 describe "Visit the home page", type: :system, perform_enqueued: true do
   let(:organization) { create :organization }
-  let!(:terms_and_conditions_page) { Decidim::StaticPage.find_by(slug: "terms-and-conditions", organization: organization) }
 
   before do
     switch_to_host(organization.host)
@@ -21,6 +20,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
 
   it "has privacy policy" do
     expect(page).to have_content("He llegit i accepto la política de privacitat")
+    expect(page).to have_content("Responsable: Fòrum Nacional de la Joventut d' Andorra.")
   end
 
   context "when submiting" do

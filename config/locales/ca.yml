@@ -23,3 +23,13 @@ ca:
         new:
           i_have_read: He llegit i accepto la %{link}
           privacy: política de privacitat
+      disclaimer_html: |
+        <b>Responsable:</b> Fòrum Nacional de la Joventut d' Andorra.
+        <br><b>Finalitat:</b> enregistrar i gestionar l'alta d'usuari. 
+        <br><b>Legitimació:</b>
+        consentiment de l'usuari. 
+        <br><b>Cessió:</b> les dades segueixen les
+        polítiques de les plataformes amb les quals l'usuari es dona
+        d'alta. 
+        <br><b>Drets:</b> podreu exercir els vostres drets a l'adreça:
+        dpd@forumandorra.com.
