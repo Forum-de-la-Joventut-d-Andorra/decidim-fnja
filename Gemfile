@@ -22,7 +22,6 @@ gem "decidim-decidim_awesome", github: "openpoke/decidim-module-decidim_awesome"
 gem "decidim-direct_verifications", "~> 1.2"
 gem "decidim-term_customizer", git: "https://github.com/openpoke/decidim-module-term_customizer", branch: "master"
 
-gem "deface"
 gem "virtus-multiparams"
 
 group :development, :test do
