@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CensusActionAuthorizer < Decidim::Verifications::DefaultActionAuthorizer
+class YouthCensusActionAuthorizer < Decidim::Verifications::DefaultActionAuthorizer
   def authorize
     return [:missing, { action: :authorize }] if authorization.blank?
 
@@ -15,10 +15,11 @@ class CensusActionAuthorizer < Decidim::Verifications::DefaultActionAuthorizer
   private
 
   def age_allowed?
-    age = Time.zone.today.year - Date.parse(date_of_birth).year
-    return if age < 16
+    # rubocop:disable Rails/Date
+    age = ((Time.zone.now - Date.parse(date_of_birth).to_time) / 1.year.seconds).floor
+    # rubocop:enable Rails/Date
 
-    age < 36
+    age.between? 16, 35
   rescue StandardError => e
     Rails.logger.error "ACTION AUTHORIZER ERROR: #{e.message}"
   end
