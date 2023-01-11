@@ -1,0 +1,5 @@
+<!-- replace "p.tos-text" -->
+
+<p>
+  <%= t("decidim.devise.disclaimer_html") %>
+</p>

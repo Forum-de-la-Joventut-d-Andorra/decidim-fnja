@@ -1,0 +1,3 @@
+<!-- insert_after "erb[loud]:contains(':tos_agreement')" -->
+
+<%= f.check_box :privacy_agreement, label: t(".i_have_read", link: link_to(t(".privacy"), page_path("privacy"))) %>
