@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.26-stable" }.freeze
+DECIDIM_VERSION = { github: "openpoke/decidim", branch: "0.27-backports" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
@@ -18,9 +18,9 @@ gem "faker", "~> 2.14"
 gem "puma", ">= 5.0.0"
 gem "uglifier", "~> 4.1"
 
-gem "decidim-decidim_awesome", github: "openpoke/decidim-module-decidim_awesome"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
 gem "decidim-direct_verifications", "~> 1.2"
-gem "decidim-term_customizer", git: "https://github.com/openpoke/decidim-module-term_customizer", branch: "master"
+gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer"
 
 gem "virtus-multiparams"
 
