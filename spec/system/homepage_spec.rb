@@ -15,6 +15,7 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
   end
 
   it "has a link to the cookies page" do
+    click_link "Help"
     within ".cookie-warning" do
       expect(page).to have_link("Find out more about cookies", href: "/pages/cookies")
     end
