@@ -19,7 +19,7 @@ gem "puma"
 gem "uglifier", "~> 4.1"
 
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
-gem "decidim-direct_verifications", "~> 1.2"
+gem "decidim-direct_verifications", github: "platoniq/decidim-verifications-direct_verifications"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "master"
 
 group :development, :test do
