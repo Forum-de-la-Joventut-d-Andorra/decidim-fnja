@@ -15,9 +15,7 @@ class YouthCensusActionAuthorizer < Decidim::Verifications::DefaultActionAuthori
   private
 
   def age_allowed?
-    # rubocop:disable Rails/Date
     age = ((Time.zone.now - Date.parse(date_of_birth).to_time) / 1.year.seconds).floor
-    # rubocop:enable Rails/Date
 
     age.between? 16, 35
   rescue StandardError => e

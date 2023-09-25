@@ -6,6 +6,13 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
   let(:organization) { create :organization }
 
   before do
+    page.driver.browser.execute_cdp(
+      "Network.deleteCookies",
+      domain: ".#{organization.host}",
+      name: Decidim.consent_cookie_name,
+      path: "/"
+    )
+
     switch_to_host(organization.host)
     visit decidim.root_path
   end
@@ -14,9 +21,14 @@ describe "Visit the home page", type: :system, perform_enqueued: true do
     expect(page).to have_content("Home")
   end
 
-  it "has a link to the cookies page" do
-    within ".cookie-warning" do
-      expect(page).to have_link("Find out more about cookies", href: "/pages/cookies")
+  it "has the cookies message" do
+    within("#dc-dialog-wrapper") do
+      expect(page).to have_content("Information about the cookies used on the website")
     end
+  end
+
+  it "discards the data consent" do
+    click_button(id: "dc-dialog-accept")
+    expect(page).not_to have_content("Information about the cookies used on the website")
   end
 end
