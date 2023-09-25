@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { git: "https://github.com/decidim/decidim", tag: "release/0.27-stable" }.freeze
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.27-stable" }.freeze
 
 gem "decidim", DECIDIM_VERSION
 gem "decidim-consultations", DECIDIM_VERSION
@@ -21,8 +21,6 @@ gem "uglifier", "~> 4.1"
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
 gem "decidim-direct_verifications", "~> 1.2"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "master"
-
-gem "virtus-multiparams"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
