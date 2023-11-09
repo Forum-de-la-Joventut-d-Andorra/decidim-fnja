@@ -48,9 +48,6 @@ COPY ./db /app/db
 COPY ./lib /app/lib
 COPY ./packages /app/packages
 COPY ./public/*.* /app/public/
-COPY ./public/partners1 /app/public/partners1
-COPY ./public/partners2 /app/public/partners2
-COPY ./public/partners3 /app/public/partners3
 COPY ./config.ru /app/config.ru
 COPY ./Rakefile /app/Rakefile
 COPY ./babel.config.json /app/babel.config.json
