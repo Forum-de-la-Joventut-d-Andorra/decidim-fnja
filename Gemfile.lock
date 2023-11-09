@@ -403,7 +403,7 @@ GEM
     et-orbi (1.2.7)
       tzinfo
     excon (0.104.0)
-    execjs (2.9.1)
+    execjs (2.8.1)
     extended-markdown-filter (0.7.0)
       html-pipeline (~> 2.9)
     factory_bot (4.11.1)
@@ -552,10 +552,6 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.5.9)
-    nokogiri (1.14.5-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.14.5-x86_64-darwin)
-      racc (~> 1.4)
     nokogiri (1.14.5-x86_64-linux)
       racc (~> 1.4)
     oauth (1.1.0)
@@ -855,8 +851,6 @@ GEM
     zeitwerk (2.6.12)
 
 PLATFORMS
-  arm64-darwin-23
-  x86_64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
@@ -885,4 +879,4 @@ RUBY VERSION
    ruby 3.0.6p216
 
 BUNDLED WITH
-   2.3.20
+   2.4.21
