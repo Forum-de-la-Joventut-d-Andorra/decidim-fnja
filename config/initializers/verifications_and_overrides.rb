@@ -6,6 +6,11 @@
 #   workflow.engine = Decidim::DirectVerifications::Verification::Engine
 # end
 
+Decidim::Verifications.register_workflow(:census_authorization_handler) do |workflow|
+  workflow.form = "CensusAuthorizationHandler"
+  workflow.action_authorizer = "YouthCensusActionAuthorizer"
+end
+
 # We need to tell the plugin to handle this method in addition to the default "Direct verification". Any registered workflow is valid.
 Decidim::DirectVerifications.configure do |config|
   config.manage_workflows = %w(direct_verifications id_documents)
@@ -14,6 +19,7 @@ Decidim::DirectVerifications.configure do |config|
   # config.input_parser = :metadata_parser
 end
 
+# Precompile does not have access to a database so we avoid overrides
 if ENV["DB_ADAPTER"].blank? || ENV.fetch("DB_ADAPTER", nil) == "postgresql"
   # Remove NIE from id_documents form
   Rails.application.config.to_prepare do
@@ -21,5 +27,6 @@ if ENV["DB_ADAPTER"].blank? || ENV.fetch("DB_ADAPTER", nil) == "postgresql"
       Decidim::Verifications::IdDocuments::InformationForm.send(:remove_const, :DOCUMENT_TYPES)
       Decidim::Verifications::IdDocuments::InformationForm.const_set(:DOCUMENT_TYPES, %w(DNI passport))
     end
+    Decidim::RegistrationForm.include(RegistrationFormOverride)
   end
 end
