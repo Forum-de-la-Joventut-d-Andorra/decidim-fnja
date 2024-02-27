@@ -13,7 +13,7 @@ end
 
 # We need to tell the plugin to handle this method in addition to the default "Direct verification". Any registered workflow is valid.
 Decidim::DirectVerifications.configure do |config|
-  config.manage_workflows = %w(direct_verifications id_documents)
+  config.manage_workflows = %w(direct_verifications id_documents census_authorization_handler)
 
   # change the to the metadata_parser if you want it
   # config.input_parser = :metadata_parser
