@@ -18,7 +18,7 @@ gem "puma"
 
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
 gem "decidim-direct_verifications", github: "platoniq/decidim-verifications-direct_verifications"
-gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "master"
+gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
 group :development, :test do
   gem "faker", "~> 2.14"
