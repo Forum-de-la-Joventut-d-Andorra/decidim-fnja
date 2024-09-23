@@ -16,13 +16,15 @@ gem "bootsnap", "~> 1.7"
 gem "deface"
 gem "puma"
 
-gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome"
+gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes", branch: "main"
+gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.27-stable"
 gem "decidim-direct_verifications", github: "platoniq/decidim-verifications-direct_verifications"
+# gem "decidim-gallery", github: "OpenSourcePolitics/decidim-module-gallery", branch: "main"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
 group :development, :test do
-  gem "faker", "~> 2.14"
   gem "byebug", "~> 11.0", platform: :mri
+  gem "faker", "~> 2.14"
 
   gem "decidim-dev", DECIDIM_VERSION
 

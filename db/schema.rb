@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_02_27_103246) do
+ActiveRecord::Schema.define(version: 2024_09_23_110435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "ltree"
@@ -133,6 +133,41 @@ ActiveRecord::Schema.define(version: 2024_02_27_103246) do
     t.index ["decidim_user_id", "decidim_amendable_id", "decidim_amendable_type"], name: "index_on_amender_and_amendable"
     t.index ["decidim_user_id"], name: "index_decidim_amendments_on_decidim_user_id"
     t.index ["state"], name: "index_decidim_amendments_on_state"
+  end
+
+  create_table "decidim_anonymous_codes_groups", force: :cascade do |t|
+    t.jsonb "title"
+    t.datetime "expires_at"
+    t.boolean "active", default: true, null: false
+    t.integer "max_reuses", default: 1, null: false
+    t.integer "tokens_count", default: 0, null: false
+    t.string "resource_type"
+    t.bigint "resource_id"
+    t.bigint "decidim_organization_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["decidim_organization_id"], name: "decidim_anonymous_codes_groups_on_organization"
+    t.index ["resource_type", "resource_id"], name: "decidim_anonymous_codes_groups_on_resource"
+  end
+
+  create_table "decidim_anonymous_codes_token_resources", force: :cascade do |t|
+    t.bigint "token_id", null: false
+    t.string "resource_type", null: false
+    t.bigint "resource_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["resource_type", "resource_id"], name: "decidim_anonymous_codes_token_resources_on_resource"
+    t.index ["token_id"], name: "decidim_anonymous_codes_token_resources_on_token"
+  end
+
+  create_table "decidim_anonymous_codes_tokens", force: :cascade do |t|
+    t.string "token", null: false
+    t.integer "usage_count", default: 0, null: false
+    t.bigint "group_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["group_id"], name: "decidim_anonymous_codes_tokens_on_group"
+    t.index ["token", "group_id"], name: "index_anonymous_codes_token_group_uniqueness", unique: true
   end
 
   create_table "decidim_area_types", force: :cascade do |t|
@@ -329,7 +364,10 @@ ActiveRecord::Schema.define(version: 2024_02_27_103246) do
     t.integer "weight_total", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["decidim_proposal_id"], name: "decidim_awesome_extra_fields_on_proposal"
+    t.string "private_body"
+    t.string "decidim_proposal_type", null: false
+    t.datetime "private_body_updated_at"
+    t.index ["decidim_proposal_id", "decidim_proposal_type"], name: "index_decidim_awesome_proposal_extra_fields_on_decidim_proposal"
   end
 
   create_table "decidim_awesome_vote_weights", force: :cascade do |t|
@@ -471,6 +509,8 @@ ActiveRecord::Schema.define(version: 2024_02_27_103246) do
     t.string "decidim_participatory_space_type"
     t.integer "decidim_participatory_space_id"
     t.datetime "deleted_at"
+    t.integer "up_votes_count", default: 0, null: false
+    t.integer "down_votes_count", default: 0, null: false
     t.index ["created_at"], name: "index_decidim_comments_comments_on_created_at"
     t.index ["decidim_author_id", "decidim_author_type"], name: "index_decidim_comments_comments_on_decidim_author"
     t.index ["decidim_author_id"], name: "decidim_comments_comment_author"
@@ -1368,6 +1408,7 @@ ActiveRecord::Schema.define(version: 2024_02_27_103246) do
     t.jsonb "body"
     t.integer "comments_count", default: 0, null: false
     t.integer "follows_count", default: 0, null: false
+    t.integer "valuation_assignments_count", default: 0
     t.index "md5((body)::text)", name: "decidim_proposals_proposal_body_search"
     t.index "md5((title)::text)", name: "decidim_proposals_proposal_title_search"
     t.index ["created_at"], name: "index_decidim_proposals_proposals_on_created_at"
@@ -1846,6 +1887,7 @@ ActiveRecord::Schema.define(version: 2024_02_27_103246) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "decidim_anonymous_codes_groups", "decidim_organizations"
   add_foreign_key "decidim_area_types", "decidim_organizations"
   add_foreign_key "decidim_areas", "decidim_area_types", column: "area_type_id"
   add_foreign_key "decidim_areas", "decidim_organizations"
