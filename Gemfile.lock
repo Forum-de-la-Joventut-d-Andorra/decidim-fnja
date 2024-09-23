@@ -203,14 +203,6 @@ GIT
       decidim-surveys (>= 0.27.0, < 0.28)
       deface (>= 1.9.0)
 
-GIT
-  remote: https://github.com/platoniq/decidim-verifications-direct_verifications.git
-  revision: a1581ece91df31b1abfc3b375de71d1125b1eaa8
-  specs:
-    decidim-direct_verifications (1.3.0)
-      decidim-admin (>= 0.27.0, < 0.28)
-      decidim-core (>= 0.27.0, < 0.28)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -910,7 +902,6 @@ DEPENDENCIES
   decidim-consultations!
   decidim-decidim_awesome!
   decidim-dev!
-  decidim-direct_verifications!
   decidim-term_customizer!
   deface
   faker (~> 2.14)

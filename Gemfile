@@ -18,7 +18,7 @@ gem "puma"
 
 gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes", branch: "main"
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.27-stable"
-gem "decidim-direct_verifications", github: "platoniq/decidim-verifications-direct_verifications"
+# gem "decidim-direct_verifications", github: "platoniq/decidim-verifications-direct_verifications"
 # gem "decidim-gallery", github: "OpenSourcePolitics/decidim-module-gallery", branch: "main"
 gem "decidim-term_customizer", github: "mainio/decidim-module-term_customizer", branch: "release/0.27-stable"
 
