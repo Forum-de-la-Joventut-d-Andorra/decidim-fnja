@@ -198,6 +198,18 @@ GIT
     decidim-verifications (0.29.3)
       decidim-core (= 0.29.3)
 
+GIT
+  remote: https://github.com/openpoke/decidim-module-anonymous_codes.git
+  revision: 3cd5371422516e6051549cd4c93c66e66d30721c
+  branch: update/0.29
+  specs:
+    decidim-anonymous_codes (1.1)
+      decidim-admin (>= 0.29.0, < 0.30)
+      decidim-core (>= 0.29.0, < 0.30)
+      decidim-forms (>= 0.29.0, < 0.30)
+      decidim-surveys (>= 0.29.0, < 0.30)
+      deface (>= 1.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -887,6 +899,7 @@ DEPENDENCIES
   brakeman (~> 5.4)
   byebug (~> 11.0)
   decidim!
+  decidim-anonymous_codes!
   decidim-decidim_awesome!
   decidim-dev!
   decidim-templates!

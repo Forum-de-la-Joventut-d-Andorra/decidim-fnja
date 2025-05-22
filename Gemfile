@@ -6,6 +6,7 @@ ruby RUBY_VERSION
 
 DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.29-stable" }.freeze
 gem "decidim", DECIDIM_VERSION
+gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes", branch: "update/0.29"
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "hashcash"
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-term_customizer", github: "CodiTramuntana/decidim-module-term_customizer", branch: "upgrade/decidim_0.29"
@@ -32,7 +33,7 @@ group :development do
 end
 
 group :production do
-  gem "aws-sdk-s3"
+  gem "aws-sdk-s3", require: false
   gem "sidekiq"
   gem "sidekiq-cron"
 end
