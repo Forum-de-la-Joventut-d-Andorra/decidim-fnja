@@ -1,33 +1,34 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   "true": "foo"
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
+---
 en:
-  hello: "Hello world"
+  activemodel:
+    attributes:
+      census_authorization_handler:
+        date_of_birth: Date of birth
+        document_number: Document number (with letter)
+      user:
+        privacy_agreement: Privacy policy
+  decidim:
+    authorization_handlers:
+      census_authorization_handler:
+        connection_error: Verification could not be completed
+        explanation: Verify your account if you are a resident
+        fields:
+          date_of_birth: Date of birth
+          zone: Zone
+        invalid_date_of_birth: The date of birth is not valid
+        invalid_document: The document number is not valid
+        name: Resident in Andorra (from 16 to 35 years old)
+    devise:
+      registrations:
+        new:
+          i_have_read: I have read and accept the %{link}
+          privacy: privacy policy
+      disclaimer_html: |
+        <b>Responsible:</b> National Youth Forum of Andorra.
+        <br><b>Purpose:</b> register and manage user registration.
+        <br><b>Legal basis:</b>
+        user consent.
+        <br><b>Disclosure:</b> data follows the
+        policies of the platforms with which the user registers.
+        <br><b>Rights:</b> you can exercise your rights at:
+        dpd@forumandorra.com.

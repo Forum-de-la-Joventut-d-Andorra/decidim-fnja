@@ -1,0 +1,18 @@
+---
+es:
+  activemodel:
+    attributes:
+      census_authorization_handler:
+        date_of_birth: Fecha de nacimiento
+        document_number: Número de documento (con letra)
+  decidim:
+    authorization_handlers:
+      census_authorization_handler:
+        connection_error: No ha sido posible realizar la verificación
+        explanation: Verifica tu cuenta si eres residente
+        fields:
+          date_of_birth: Fecha de nacimiento
+          zona: Zona
+        invalid_date_of_birth: La fecha de nacimiento no es válida
+        invalid_document: El número de documento no es válido
+        name: Residente en Andorra (de 16 a 35 años)

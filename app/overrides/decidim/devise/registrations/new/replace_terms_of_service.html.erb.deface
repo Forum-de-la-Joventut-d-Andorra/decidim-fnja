@@ -1,0 +1,15 @@
+<!-- replace "#card__tos" -->
+
+<div id="card__tos" class="form__wrapper-block">
+  <h2 class="h4"><%= t("decidim.devise.registrations.new.tos_title") %></h2>
+
+  <div>
+    <p>
+      <%= t("decidim.devise.disclaimer_html") %>
+    </p>
+  </div>
+
+  <%= f.check_box :tos_agreement, label: t("decidim.devise.registrations.new.tos_agreement", link: link_to(t("decidim.devise.registrations.new.terms"), page_path("terms-of-service"))), label_options: { class: "form__wrapper-checkbox-label" } %>
+  <%= f.check_box :privacy_agreement, label: t("decidim.devise.registrations.new.i_have_read", link: link_to(t("decidim.devise.registrations.new.privacy"), page_path("privacy"))), label_options: { class: "form__wrapper-checkbox-label" } %>
+</div>
+

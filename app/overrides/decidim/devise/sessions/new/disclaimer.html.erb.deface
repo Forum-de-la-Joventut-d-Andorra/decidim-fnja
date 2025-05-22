@@ -1,0 +1,5 @@
+<!-- insert_bottom ".form__wrapper" -->
+
+<p>
+  <%= t("decidim.devise.disclaimer_html") %>
+</p>
