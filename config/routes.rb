@@ -8,7 +8,10 @@ Rails.application.routes.draw do
 
   authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => "/sidekiq"
-    mount ActiveHashcash::Engine, at: "hashcash"
+  end
+
+  namespace :admin do
+    resources :iframe, only: [:index]
   end
 
   mount Decidim::Core::Engine => "/"
