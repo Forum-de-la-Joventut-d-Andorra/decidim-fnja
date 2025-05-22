@@ -9,7 +9,7 @@
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
-/db/*.sqlite3-journal
+/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -17,12 +17,17 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
 /storage/*
 !/storage/.keep
-
-/node_modules
-/yarn-error.log
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
 
 /public/assets
 .byebug_history
@@ -30,30 +35,24 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-# Ignore public uploads
-public/uploads
+# Ignore env configuration files
+.env
+.envrc
 .rbenv-vars
+
+# Ignore the files and folders generated through Webpack
+/public/decidim-packs
+/public/packs-test
+/public/sw.*
+/public/packs
+.rubocop-https*
+
+# Ignore node modules
+/node_modules
+
+# Ignore .rspec-failures
 .rspec-failures
 
-spec/decidim_dummy_app/*
-.vscode
-
-config/deploy
-config/deploy.rb
-config/application.yml
-Capfile
-/public/packs
-/public/packs-test
-/public/decidim-packs
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
-public/sw.js
-public/sw.js.map
+# Ignore Tailwind configuration
+tailwind.config.js
+coverage

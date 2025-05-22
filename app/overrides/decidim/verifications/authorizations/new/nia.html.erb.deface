@@ -1,5 +1,0 @@
-<!-- insert_before ".card__content" -->
-
-<% if handler.handler_name == "census_authorization_handler" %>
-	<div style="margin: 1em"><%= image_pack_tag "media/images/nia.png" %></div>
-<% end %>
