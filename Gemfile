@@ -11,6 +11,7 @@ gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_aweso
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-term_customizer", github: "CodiTramuntana/decidim-module-term_customizer", branch: "upgrade/decidim_0.29"
 
+gem "aws-sdk-s3"
 gem "bootsnap", "~> 1.3"
 gem "deface"
 gem "health_check"
@@ -33,7 +34,6 @@ group :development do
 end
 
 group :production do
-  gem "aws-sdk-s3", require: false
   gem "sidekiq"
   gem "sidekiq-cron"
 end
