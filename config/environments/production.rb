@@ -60,10 +60,9 @@ Rails.application.configure do
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   config.active_job.queue_adapter = ENV["QUEUE_ADAPTER"] if ENV["QUEUE_ADAPTER"].present?
-  # config.active_job.queue_name_prefix = "decidim_tolosa_production"
+  # config.active_job.queue_name_prefix = "decidim_andorra_production"
 
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { protocol: "https" }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

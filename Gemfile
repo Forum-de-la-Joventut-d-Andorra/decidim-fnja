@@ -23,7 +23,7 @@ gem "sentry-ruby"
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
 
-  gem "brakeman", "~> 5.4"
+  gem "brakeman", "~> 6.1"
   gem "decidim-dev", DECIDIM_VERSION
 end
 

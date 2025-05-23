@@ -43,9 +43,8 @@
 # Ignore the files and folders generated through Webpack
 /public/decidim-packs
 /public/packs-test
-/public/sw.*
-/public/packs
-.rubocop-https*
+/public/sw.js*
+
 
 # Ignore node modules
 /node_modules
@@ -55,4 +54,6 @@
 
 # Ignore Tailwind configuration
 tailwind.config.js
-coverage
+.rspec-failures
+coverage/*
+.byebug*
