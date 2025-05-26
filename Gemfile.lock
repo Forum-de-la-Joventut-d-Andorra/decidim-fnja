@@ -9,8 +9,8 @@ GIT
 
 GIT
   remote: https://github.com/decidim-ice/decidim-module-decidim_awesome.git
-  revision: fc51a1fbb2c75e7d876b784361119932e6893ead
-  branch: hashcash
+  revision: 41fdbcae3811f5fe33b00a1cacb92dd607febaa8
+  branch: main
   specs:
     decidim-decidim_awesome (0.12.2)
       active_hashcash (~> 0.4.0)
@@ -200,8 +200,8 @@ GIT
 
 GIT
   remote: https://github.com/openpoke/decidim-module-anonymous_codes.git
-  revision: 800ba64ee2a15ffd067497234b2fcb2a9597a5e0
-  branch: update/0.29
+  revision: 8323978480579ac290a52cdb2de10a6a27f6fa70
+  branch: main
   specs:
     decidim-anonymous_codes (1.1)
       decidim-admin (>= 0.29.0, < 0.30)
