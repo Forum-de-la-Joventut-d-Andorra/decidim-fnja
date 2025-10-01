@@ -5,6 +5,11 @@ ca:
       front_page_link: Ves a la pàgina principal
       logo: "Logo oficial de %{organization}"
       skip_button: Salta i ves al contingut principal
+    pages:
+      home:
+        extended:
+          participatory_processes: Participa
+          assemblies: Decideix
 es:
   decidim:
     accessibility:
