@@ -3,7 +3,7 @@
 require "rails_helper"
 
 describe "HomePage", perform_enqueued: true do
-  let(:organization) { create :organization }
+  let(:organization) { create(:organization) }
 
   before do
     page.driver.browser.execute_cdp(
