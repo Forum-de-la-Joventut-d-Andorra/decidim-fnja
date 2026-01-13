@@ -8,7 +8,7 @@ DECIDIM_VERSION = { github: "decidim/decidim", branch: "release/0.30-stable" }.f
 gem "decidim", DECIDIM_VERSION
 # gem "decidim-anonymous_codes", github: "openpoke/decidim-module-anonymous_codes", branch: "main"
 gem "decidim-decidim_awesome", github: "decidim-ice/decidim-module-decidim_awesome", branch: "release/0.30-stable"
-gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "release/0.30-stable"
+# gem "decidim-pokecode", github: "openpoke/decidim-module-pokecode", branch: "release/0.30-stable"
 gem "decidim-templates", DECIDIM_VERSION
 gem "decidim-term_customizer", github: "openpoke/decidim-module-term_customizer", branch: "release/0.30-stable"
 
