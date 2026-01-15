@@ -5,7 +5,7 @@ require "rails_helper"
 describe YouthCensusActionAuthorizer do
   subject { described_class.new(authorization, {}, nil, nil).authorize }
 
-  let(:authorization) { create :authorization, :granted, name: "census_authorization_handler", metadata: }
+  let(:authorization) { create(:authorization, :granted, name: "census_authorization_handler", metadata:) }
   let(:metadata) do
     { "date_of_birth" => date_of_birth }
   end

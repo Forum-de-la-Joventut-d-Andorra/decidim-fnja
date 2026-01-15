@@ -9,7 +9,7 @@ def fill_registration_form
 end
 
 describe "Register", perform_enqueued: true do
-  let(:organization) { create :organization }
+  let(:organization) { create(:organization) }
 
   before do
     switch_to_host(organization.host)

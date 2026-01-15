@@ -17,7 +17,6 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore pidfiles, but keep the directory.
 /tmp/pids/*
 !/tmp/pids/
 !/tmp/pids/.keep
@@ -30,7 +29,6 @@
 !/tmp/storage/.keep
 
 /public/assets
-.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -39,21 +37,32 @@
 .env
 .envrc
 .rbenv-vars
+mise.toml
+
+# Others
+.vscode
+.byebug*
+*.gem
+*.sql
+.rubocop-http*
+/coverage/
+backups/*
+!backups/.keep
 
 # Ignore the files and folders generated through Webpack
+/public/packs
+/public/packs-test
 /public/decidim-packs
 /public/packs-test
 /public/sw.js*
-
+/public/sw.js.map*
 
 # Ignore node modules
 /node_modules
-
-# Ignore .rspec-failures
-.rspec-failures
+/packages/*/node_modules
+npm_debug.log
 
 # Ignore Tailwind configuration
 tailwind.config.js
 .rspec-failures
-coverage/*
-.byebug*
+

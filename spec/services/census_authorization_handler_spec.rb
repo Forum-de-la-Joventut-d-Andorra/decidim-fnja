@@ -9,7 +9,7 @@ describe CensusAuthorizationHandler do
   let(:handler) { described_class.from_params(params) }
   let(:document_number) { "B123456A" }
   let(:date_of_birth) { 18.years.ago }
-  let(:user) { create :user }
+  let(:user) { create(:user) }
   let(:code) { "OK" }
   let(:message) { "data de naixement" }
   let(:params) do
