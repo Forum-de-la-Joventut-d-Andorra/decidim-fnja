@@ -197,18 +197,6 @@ GIT
       decidim-core (= 0.30.4)
 
 GIT
-  remote: https://github.com/openpoke/decidim-module-anonymous_codes.git
-  revision: c1418299e580a385287c2219c38ead22f7fd9dec
-  branch: upgrade-0.30
-  specs:
-    decidim-anonymous_codes (1.2)
-      decidim-admin (>= 0.30.0, < 0.31)
-      decidim-core (>= 0.30.0, < 0.31)
-      decidim-forms (>= 0.30.0, < 0.31)
-      decidim-surveys (>= 0.30.0, < 0.31)
-      deface (>= 1.9.0)
-
-GIT
   remote: https://github.com/openpoke/decidim-module-term_customizer.git
   revision: 00d55ec218e84e5bced560b3b4253f06c9e8104b
   branch: release/0.30-stable
@@ -942,7 +930,6 @@ DEPENDENCIES
   brakeman (~> 6.1)
   byebug (~> 11.0)
   decidim!
-  decidim-anonymous_codes!
   decidim-decidim_awesome!
   decidim-dev!
   decidim-templates!
