@@ -1,3 +1,0 @@
-<!-- replace ".mini-footer__content" -->
-
-<%= render "fnja/mini_footer" %>
