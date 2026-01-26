@@ -48,7 +48,7 @@ en:
           connection_error: The census service is temporarily unavailable. Please
             try again later.
           date_of_birth: Date of birth
-          document_number: Document number (with letter)
+          document_number: Document number
           document_number_placeholder: e.g., B123456A
           invalid_date_of_birth: The date of birth is not valid
           invalid_document: The document number is not valid or is not in the census

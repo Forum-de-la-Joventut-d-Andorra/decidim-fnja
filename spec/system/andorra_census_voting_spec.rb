@@ -27,7 +27,7 @@ describe "Andorra census voting" do
   end
 
   def fill_andorra_census_form
-    fill_in "Document number (with letter)", with: document_number
+    fill_in "Document number", with: document_number
     fill_in_datepicker :andorra_census_date_of_birth_date, with: "15/03/1995"
     click_on "Access"
   end
@@ -43,6 +43,8 @@ describe "Andorra census voting" do
       click_on "Vote"
       expect(page).to have_current_path(new_election_vote_path)
       expect(page).to have_content("Verify your identity")
+      expect(page).to have_content("Document number")
+      expect(page).to have_content("Date of birth")
 
       fill_andorra_census_form
       fill_in_votes
