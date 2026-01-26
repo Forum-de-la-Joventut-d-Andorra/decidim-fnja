@@ -1,0 +1,11 @@
+<%= form.text_field :document_number,
+    label: t(".document_number"),
+    placeholder: t(".document_number_placeholder"),
+    autofocus: true,
+    required: true %>
+
+<%= form.date_field :date_of_birth,
+    label: t(".date_of_birth"),
+    required: true %>
+
+<%= render "decidim/elections/censuses/submit_button", form: form %>

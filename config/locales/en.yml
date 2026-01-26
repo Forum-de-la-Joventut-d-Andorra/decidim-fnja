@@ -19,10 +19,6 @@ en:
         invalid_document: The document number is not valid
         name: Resident in Andorra (from 16 to 35 years old)
     devise:
-      registrations:
-        new:
-          i_have_read: I have read and accept the %{link}
-          privacy: privacy policy
       disclaimer_html: |
         <b>Responsible:</b> National Youth Forum of Andorra.
         <br><b>Purpose:</b> register and manage user registration.
@@ -32,3 +28,27 @@ en:
         policies of the platforms with which the user registers.
         <br><b>Rights:</b> you can exercise your rights at:
         dpd@forumandorra.com.
+      registrations:
+        new:
+          i_have_read: I have read and accept the %{link}
+          privacy: privacy policy
+    elections:
+      admin:
+        censuses:
+          andorra_census_form:
+            description: Voters are verified in real time against the official census.
+              They enter their identification details directly in the voting booth.
+              No platform registration is required.
+            info: No additional setup is needed. The voter list is managed by the
+              external census service.
+      censuses:
+        andorra_census:
+          label: Resident in Andorra (from 16 to 35 years old)
+        andorra_census_form:
+          connection_error: The census service is temporarily unavailable. Please
+            try again later.
+          date_of_birth: Date of birth
+          document_number: Document number (with letter)
+          document_number_placeholder: e.g., B123456A
+          invalid_date_of_birth: The date of birth is not valid
+          invalid_document: The document number is not valid or is not in the census
