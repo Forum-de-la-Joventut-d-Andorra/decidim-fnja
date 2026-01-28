@@ -19,10 +19,6 @@ ca:
         invalid_document: El número de document no és vàlid
         name: Resident a Andorra (de 16 a 35 anys)
     devise:
-      registrations:
-        new:
-          i_have_read: He llegit i accepto la %{link}
-          privacy: política de privacitat
       disclaimer_html: |
         <b>Responsable:</b> Fòrum Nacional de la Joventut d' Andorra.
         <br><b>Finalitat:</b> enregistrar i gestionar l'alta d'usuari. 
@@ -33,3 +29,27 @@ ca:
         d'alta. 
         <br><b>Drets:</b> podreu exercir els vostres drets a l'adreça:
         dpd@forumandorra.com.
+      registrations:
+        new:
+          i_have_read: He llegit i accepto la %{link}
+          privacy: política de privacitat
+    elections:
+      admin:
+        censuses:
+          andorra_census_form:
+            description: Els votants es verifiquen en temps real contra el cens oficial.
+              Introdueixen les seves dades d'identificació directament a la cabina de votació.
+              No es requereix registre a la plataforma.
+            info: No cal realitzar cap configuració addicional. La llista d'electors la gestiona
+              el servei de cens extern.
+      censuses:
+        andorra_census:
+          label: Resident a Andorra (de 16 a 35 anys)
+        andorra_census_form:
+          connection_error: El servei de cens no està disponible temporalment. Siusplau,
+            intenteu-ho més tard.
+          date_of_birth: Data de naixement
+          document_number: Número de document
+          document_number_placeholder: p.e., B123456A
+          invalid_date_of_birth: La data de naixement no és vàlida
+          invalid_document: El número de document no és vàlid o no està en el cens

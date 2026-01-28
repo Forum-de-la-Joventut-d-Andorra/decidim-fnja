@@ -11,9 +11,34 @@ GIT
       sassc (~> 2.3)
 
 GIT
-  remote: https://github.com/decidim/decidim.git
-  revision: bd2ed039fa9cd6879f66db1d2662e85e9e46dab0
-  branch: release/0.31-stable
+  remote: https://github.com/openpoke/decidim-module-pokecode.git
+  revision: de1b475846314af7116a544f23ce034d0f978190
+  branch: main
+  specs:
+    decidim-pokecode (0.2.0)
+      aws-sdk-s3
+      decidim-core (>= 0.31.0, < 0.32)
+      deface (>= 1.5)
+      health_check
+      rails_semantic_logger
+      sentry-rails
+      sentry-ruby
+      sidekiq
+      sidekiq-cron
+
+GIT
+  remote: https://github.com/openpoke/decidim-module-term_customizer.git
+  revision: 8cd8bafc273b34ff7dae7c0dcbf231062aa68466
+  branch: main
+  specs:
+    decidim-term_customizer (0.31)
+      decidim-admin (~> 0.31.0)
+      decidim-core (~> 0.31.0)
+
+GIT
+  remote: https://github.com/openpoke/decidim.git
+  revision: e75c8169cd555c4af06c675fd14bf01b33f6b87c
+  branch: 0.31-backports
   specs:
     decidim (0.31.0)
       decidim-accountability (= 0.31.0)
@@ -202,31 +227,6 @@ GIT
       decidim-forms (= 0.31.0)
     decidim-verifications (0.31.0)
       decidim-core (= 0.31.0)
-
-GIT
-  remote: https://github.com/openpoke/decidim-module-pokecode.git
-  revision: de1b475846314af7116a544f23ce034d0f978190
-  branch: main
-  specs:
-    decidim-pokecode (0.2.0)
-      aws-sdk-s3
-      decidim-core (>= 0.31.0, < 0.32)
-      deface (>= 1.5)
-      health_check
-      rails_semantic_logger
-      sentry-rails
-      sentry-ruby
-      sidekiq
-      sidekiq-cron
-
-GIT
-  remote: https://github.com/openpoke/decidim-module-term_customizer.git
-  revision: 8cd8bafc273b34ff7dae7c0dcbf231062aa68466
-  branch: main
-  specs:
-    decidim-term_customizer (0.31)
-      decidim-admin (~> 0.31.0)
-      decidim-core (~> 0.31.0)
 
 GEM
   remote: https://rubygems.org/
