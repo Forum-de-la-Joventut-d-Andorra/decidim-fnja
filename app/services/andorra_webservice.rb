@@ -13,15 +13,15 @@ class AndorraWebservice
   attr_writer :census_url, :census_username, :census_password
 
   def census_url
-    @census_url ||= Rails.application.secrets.dig(:census, :url)
+    @census_url ||= ENV.fetch("CENSUS_URL", nil)
   end
 
   def census_username
-    @census_username ||= Rails.application.secrets.dig(:census, :username)
+    @census_username ||= ENV.fetch("CENSUS_USERNAME", nil)
   end
 
   def census_password
-    @census_password ||= Rails.application.secrets.dig(:census, :password)
+    @census_password ||= ENV.fetch("CENSUS_PASSWORD", nil)
   end
 
   def response

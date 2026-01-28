@@ -5,3 +5,7 @@ AllCops:
   Exclude:
     - 'db/**/*.rb'
     - 'vendor/**/*'
+
+RSpec/DescribeClass:
+  Exclude:
+    - "spec/system/**/*"

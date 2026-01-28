@@ -16,3 +16,37 @@ es:
         invalid_date_of_birth: La fecha de nacimiento no es válida
         invalid_document: El número de documento no es válido
         name: Residente en Andorra (de 16 a 35 años)
+    devise:
+      disclaimer_html: |
+        <b>Responsable:</b> Foro Nacional de la Juventud de Andorra.
+        <br><b>Finalidad:</b> registrar y gestionar el alta de usuario.
+        <br><b>Base legal:</b>
+        consentimiento del usuario.
+        <br><b>Cesión:</b> los datos siguen las
+        políticas de las plataformas con las que el usuario se registra.
+        <br><b>Derechos:</b> puede ejercer sus derechos en:
+        dpd@forumandorra.com.
+      registrations:
+        new:
+          i_have_read: He leído y acepto la %{link}
+          privacy: política de privacidad
+    elections:
+      admin:
+        censuses:
+          andorra_census_form:
+            description: Los votantes se verifican en tiempo real contra el censo oficial.
+              Introducen sus datos de identificación directamente en la cabina de votación.
+              No se requiere registro en la plataforma.
+            info: No se necesita configuración adicional. La lista de votantes la gestiona
+              el servicio de censo externo.
+      censuses:
+        andorra_census:
+          label: Residente en Andorra (de 16 a 35 años)
+        andorra_census_form:
+          connection_error: El servicio de censo no está disponible temporalmente. Por favor,
+            intente más tarde.
+          date_of_birth: Fecha de nacimiento
+          document_number: Número de documento
+          document_number_placeholder: ej., B123456A
+          invalid_date_of_birth: La fecha de nacimiento no es válida
+          invalid_document: El número de documento no es válido o no está en el censo
