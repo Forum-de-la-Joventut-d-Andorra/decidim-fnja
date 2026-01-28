@@ -6,8 +6,8 @@ require "decidim/elections/test/vote_examples"
 describe "Andorra census voting" do
   let!(:election) { create(:election, :published, :ongoing, census_manifest: "andorra_census") }
   let(:webservice) { instance_double(AndorraWebservice) }
-  let!(:question1) { create(:election_question, :with_response_options, election:, question_type: "single_option") }
-  let!(:question2) { create(:election_question, :with_response_options, election:, question_type: "multiple_option") }
+  let!(:question1) { create(:election_question, :with_response_options, election:, question_type: "single_option", skip_injection: true) }
+  let!(:question2) { create(:election_question, :with_response_options, election:, question_type: "multiple_option", skip_injection: true) }
   let(:organization) { election.organization }
   let(:document_number) { "B123456A" }
   let(:voter_uid) { Digest::MD5.hexdigest("#{document_number.upcase}-#{Rails.application.secret_key_base}") }
