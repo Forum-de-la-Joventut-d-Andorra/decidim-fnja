@@ -53,3 +53,54 @@ ca:
           document_number_placeholder: p.e., B123456A
           invalid_date_of_birth: La data de naixement no és vàlida
           invalid_document: El número de document no és vàlid o no està en el cens
+  layouts:
+    decidim:
+      data_consent:
+        details:
+          items:
+            _session_id:
+              description: Permet als llocs web recordar l'usuari dins d'un lloc web quan es mou entre pàgines web.
+              service: Aquest lloc web
+            decidim-consent:
+              description: Emmagatzema informació sobre les galetes permeses per l'usuari en aquest lloc web.
+              service: Aquest lloc web
+            remember_user_token:
+              description: Permet mantenir la teva sessió oberta si feu clic a "Recorda'm" al iniciar la sessió.
+              service: Aquest lloc web
+            "emojiPicker-recent":
+              description: Emmagatzema els emojis seleccionats més recentment
+              service: Aquest lloc web
+            "graphiql:docExplorerOpen":
+              description: Guarda si teniu el panell de documentació obert quan s'utilitza l'API de GraphQL
+              service: Aquest lloc web
+            "graphiql:editorFlex":
+              description: Guarda la vostra preferència de pestanya quan s'utilitza l'API de GraphQL
+              service: Aquest lloc web
+            "graphiql:historyPaneOpen":
+              description: Guarda si teniu el panell d'historial obert quan s'utilitza l'API de GraphQL
+              service: Aquest lloc web
+            "graphiql:queries":
+              description: Guarda l'historial de les vostres consultes quan s'utilitza l'API de GraphQL
+              service: Aquest lloc web
+            "graphiql:query":
+              description: Guarda la vostra última consulta quan s'utilitza l'API de GraphQL
+              service: Aquest lloc web
+            "graphiql:tabState":
+              description: Guarda la vostra configuració de pestanya quan s'utilitza l'API de GraphQL
+              service: Aquest lloc web
+          types:
+            localstorage: LocalStorage
+        modal:
+          analytics:
+            description: Les galetes analítiques són galetes que rastregen com els usuaris naveguen i interactuen amb un lloc web. La informació recollida s'utilitza per ajudar al propietari del lloc web a millorar el lloc web.
+            title: Analítiques i estadístiques
+          description: Utilitzem galetes per garantir les funcionalitats bàsiques del lloc web i per millorar la vostra experiència en línia. Podeu optar per cada categoria per consentir/denegar sempre que vulgueu.
+          essential:
+            description: Aquestes galetes són essencials per al funcionament adequat del meu lloc web. Sense aquestes galetes, el lloc web no funcionaria correctament.
+            title: Essencial
+          marketing:
+            description: Aquestes galetes recopilen informació sobre com utilitzeu el lloc web, quines pàgines heu visitat i en quins enllaços heu fet clic.
+            title: Màrqueting
+          preferences:
+            description: Aquestes galetes permeten que el lloc web recordi les opcions que heu realitzat en el passat
+            title: Preferències
