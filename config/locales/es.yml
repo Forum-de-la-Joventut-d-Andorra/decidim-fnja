@@ -50,3 +50,54 @@ es:
           document_number_placeholder: ej., B123456A
           invalid_date_of_birth: La fecha de nacimiento no es válida
           invalid_document: El número de documento no es válido o no está en el censo
+  layouts:
+    decidim:
+      data_consent:
+        details:
+          items:
+            _session_id:
+              description: Permite que los sitios web recuerden al usuario dentro de un sitio web cuando se mueve entre páginas web.
+              service: Este sitio web
+            decidim-consent:
+              description: Almacena información sobre las cookies permitidas por el usuario en este sitio web.
+              service: Este sitio web
+            remember_user_token:
+              description: Permite mantener tu sesión abierta si haces clic en "Recuérdame" al iniciar sesión.
+              service: Este sitio web
+            "emojiPicker-recent":
+              description: Almacena tus emojis seleccionados más recientemente
+              service: Este sitio web
+            "graphiql:docExplorerOpen":
+              description: Guarda si tienes el panel de documentación abierto cuando usas la API de GraphQL
+              service: Este sitio web
+            "graphiql:editorFlex":
+              description: Guarda tu preferencia de pestañas cuando usas la API de GraphQL
+              service: Este sitio web
+            "graphiql:historyPaneOpen":
+              description: Guarda si tienes el panel de historial abierto cuando usas la API de GraphQL
+              service: Este sitio web
+            "graphiql:queries":
+              description: Guarda el historial de tus consultas cuando usas la API de GraphQL
+              service: Este sitio web
+            "graphiql:query":
+              description: Guarda tu última consulta cuando usas la API de GraphQL
+              service: Este sitio web
+            "graphiql:tabState":
+              description: Guarda tu configuración de pestañas cuando usas la API de GraphQL
+              service: Este sitio web
+          types:
+            localstorage: LocalStorage
+        modal:
+          analytics:
+            description: Las cookies analíticas son cookies que rastrean cómo los usuarios navegan e interactúan con un sitio web. La información recopilada se utiliza para ayudar al propietario del sitio web a mejorar el sitio web.
+            title: Analítica y estadísticas
+          description: Utilizamos cookies para garantizar las funcionalidades básicas del sitio web y mejorar tu experiencia en línea. Puedes optar por cada categoría para consentir/rechazar siempre que quieras.
+          essential:
+            description: Estas cookies son esenciales para el funcionamiento adecuado de mi sitio web. Sin estas cookies, el sitio web no funcionaría correctamente.
+            title: Esencial
+          marketing:
+            description: Estas cookies recopilan información sobre cómo utilizas el sitio web, qué páginas visitaste y en qué enlaces hiciste clic.
+            title: Marketing
+          preferences:
+            description: Estas cookies permiten que el sitio web recuerde las opciones que has realizado en el pasado
+            title: Preferencias
